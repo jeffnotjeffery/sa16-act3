@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Details</title>
+</head>
+<body>
+    <h1>Contact Details</h1>
+    <p><strong>Quote:</strong> {{ contact_details.quote }}</p>
+    <p><strong>Email:</strong> {{ contact_details.email }}</p>
+    <p><strong>Phone:</strong> {{ contact_details.phone }}</p>
+    <p><strong>Social Media:</strong></p>
+    <ul>
+        {% for platform, link in contact_details.social_media.items %}
+            <li><a href="{{ link }}">{{ platform }}</a></li>
+        {% endfor %}
+    </ul>
+    
+<a href="{% url 'home' %}">Home</a>
+<a href="{% url 'about' %}">About</a>
+<a href="{% url 'work' %}">Work</a>
+</body>
+</html>

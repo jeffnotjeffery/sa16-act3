@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+</head>
+<body>
+    <h1>Here is a Little About Me</h1>
+    <p>{{ bio }}</p>
+    <p><strong>Education:</strong> {{ whereIlearned }}</p>
+    <p><strong>Skills:</strong> {{ skills|join:", " }}</p>
+    <p><strong>Achievements:</strong> {{ achieved }}</p>
+
+    <a href="{% url 'home' %}">Home</a>
+    <a href="{% url 'work' %}">Work</a>
+    <a href="{% url 'contact' %}">Contact</a>
+</body>
+</html>
